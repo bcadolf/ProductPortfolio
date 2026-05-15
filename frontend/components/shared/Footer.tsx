@@ -5,7 +5,7 @@ const year = date.getFullYear();
 
 export default function Footer() {
   return (
-    <footer className='flex m-1 p-5 border-t-2 border-[#104b9e]'>
+    <footer className='flex p-5 w-dvw border-t-2 border-[#104b9e] absolute bottom-0'>
       <div>
         <Link href='#'>About</Link>
         <Link href='#'>Contact</Link>
