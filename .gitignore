@@ -1,0 +1,86 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Coverage
+coverage/
+
+# AWS/Amplify sensitive files
+amplify_outputs.json
+amplify_outputs/*.json
+amplifyconfiguration.json
+amplifyconfiguration.json.bak
+.amplify/
+.amplifyrc
+.amplifyrc.json
+
+# AWS credentials and config
+aws_credentials
+.aws/
+!.aws/config
+!.aws/credentials-example
+
+# Secrets and Keys
+.secret
+secrets/
+*.pem
+*.key
+*.keystore
+private.key
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS temp files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo

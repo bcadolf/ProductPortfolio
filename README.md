@@ -12,7 +12,6 @@ Current step: Create landing page get color scheme and format with content landi
 
 next steps:
 
-- add db for local
 - add dashboard
 - add user login
 - add skellys/loading
@@ -20,3 +19,8 @@ next steps:
 - add estimates page
 - add tickets?
 - add examples
+- add admin control dash to edit all the site content
+
+##### done:
+
+- add db for local

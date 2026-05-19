@@ -3,16 +3,15 @@ import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 const schema = a.schema({
   Product: a
     .model({
-      productId: a.id().required(),
       name: a.string().required(),
-      siteType: a.enum(['TEMPLATE', 'PRODUCTION-READY', 'LIVE-SITE']),
+      siteType: a.enum(['TEMPLATE', 'PRODUCTION_READY', 'LIVE_SITE']),
       content: a.string().required(),
       liveURL: a.url().required(),
       totalPurchases: a.integer().default(0),
       supported: a.boolean().default(true),
       basePrice: a.string().default('0.00'),
     })
-    .authorization((allow) => [allow.guest()]),
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
@@ -20,7 +19,10 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'identityPool',
+    defaultAuthorizationMode: 'apiKey',
+    apiKeyAuthorizationMode: {
+      expiresInDays: 30,
+    },
   },
 });
 
